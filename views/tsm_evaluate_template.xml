@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="tsm_evaluate_template_line_form" model="ir.ui.view">
+            <field name="name">tsm.evaluate.template.form</field>
+            <field name="model">tsm.evaluate.template</field>
+            <field name="arch" type="xml">
+                <form string="Plantilla evaluación">
+                    <sheet>
+                        <group col = "2">
+                            <group>
+                                <field name="name" />
+                            </group>
+                        </group>
+
+                        <field name="evaluate_line">
+                            <tree editable="bottom">
+                                <field name="description"/>
+                                <field name="ponderacion"/>
+                            </tree>
+                        </field>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tsm_evaluate_template_tree" model="ir.ui.view">
+            <field name="name">tsm.evaluate.template.tree</field>
+            <field name="model">tsm.evaluate.template</field>
+            <field name="arch" type="xml">
+                <tree string="Plantilla de evaluación">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

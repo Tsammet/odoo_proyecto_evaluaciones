@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ESTE MENÚ MUESTRA EL MODELO EN LA PÁG PERO NECESITA UN SUBMENÚ O NO LO MOSTRARÁ -->
+        <menuitem id="evaluations_menu"   name="EVALUATIONS" sequence="5" web_icon = "tsm_evaluations,static/description/icono_odoo.png"/>
+        <!-- ESTE MENÚ MUESTRA EL MODELO EN LA PÁG -->
+        
+
+        <!-- DE ESTA MANERA SE HACE UN SUBMENÚ  DESPLEGABLE -->
+
+        <!-- ESTE ES EL SUBMENÚ DEL QUE DESPLIEGAN LOS OTROS  -->
+        <menuitem id="master_main" parent="evaluations_menu" name="MAESTROS" sequence="5"/>
+        <!-- ESTE ES EL SUBMENÚ DEL QUE DESPLIEGAN LOS OTROS  -->
+        
+        
+        <record id="department_action" model="ir.actions.act_window">
+            <field name="name">DEPARTAMENTO</field>
+            <field name="res_model">tsm.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+          
+          <menuitem id="department_menu" parent="master_main" action="department_action" name="DEPARTAMENTO" sequence="5"/>
+        
+          <!-- sep -->
+
+<record id="employee_action" model="ir.actions.act_window">
+    <field name="name">Empleados</field>
+    <field name="res_model">tsm.employee</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="employe_menu" action="employee_action" parent="master_main" name="Empleados" sequence="5"/>
+
+<!-- sep -->
+
+<record id="position_action" model="ir.actions.act_window">
+    <field name="name">Posición</field>
+    <field name="res_model">tsm.position</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="position_menu" action="position_action" parent="master_main" name="Posición" sequence="5"/>
+<!-- DE ESTA MANERA SE HACE UN SUBMENÚ -->
+
+
+
+<!-- OTRO SUBMENU  -->
+
+<menuitem id="evaluations_template_main" parent="evaluations_menu" name="EVALUACIONES TEMPLATE" sequence="5"/>
+
+
+<record id="evaluate_template_action" model="ir.actions.act_window">
+    <field name="name">PLANTILLA</field>
+    <field name="res_model">tsm.evaluate.template</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="evaluate_menu" parent="evaluations_template_main" action="evaluate_template_action" name="Evaluacion Plantilla" sequence="5"/>
+
+
+<!-- OTRO SUBMENU  -->
+
+<!-- OTRO SUBMENU  -->
+
+<menuitem id="evaluations_main" parent="evaluations_menu" name="EVALUACIONES" sequence="5"/>
+
+
+<record id="evaluation_action" model="ir.actions.act_window">
+    <field name="name">Evaluacion</field>
+    <field name="res_model">tsm.evaluation</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="evaluation_menu" parent="evaluations_main" action="evaluation_action" name="Evaluacion" sequence="5"/>
+
+
+
+
+
+
+<!-- OTRO SUBMENU  -->
+</data>
+</odoo>
+    

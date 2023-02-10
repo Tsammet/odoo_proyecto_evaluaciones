@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="tsm_employee_form" model="ir.ui.view">
+            <field name="name">tsm.employee.form</field>
+            <field name="model">tsm.employee</field>
+            <field name="arch" type="xml">
+                <form string="EMPLEADO">
+                    <sheet>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar" nolabel="1"  options="{'preview_image': 'image'}" />
+                            
+                        </group>
+                        <group col="4">
+                            <group>
+                                <field name="first_name" />
+                                <field name="last_name" />
+                                <field name="start_date" />
+                                <field name="position" />
+                            </group>
+                            <group>
+                                <field name="birth_date" />
+                                <field name="email" />
+                                <field name="department" />
+                            </group>
+                            <group>
+                                <field name="cellphone" />
+                                <field name="salary" />
+                                <field name="city" />
+                            </group>
+                            <group>
+                                <field name="risk" />
+                                <field name="code" />
+                                <field name="term" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="tsm_employee_tree" model="ir.ui.view">
+            <field name="name">tsm.employee.tree</field>
+            <field name="model">tsm.employee</field>
+            <field name="arch" type="xml">
+                <tree string="Model Description">
+                    <field name="full_name" />
+                    <field name="birth_date" />
+                    <field name="email" />
+                    <field name="cellphone" />
+                    <field name="salary" />
+                    <field name="risk" />
+                    <field name="code" />
+                    <field name="start_date" />
+                    <field name="department" />
+                    <field name="city" />
+                    <field name="term" />
+                    <field name="position" />
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

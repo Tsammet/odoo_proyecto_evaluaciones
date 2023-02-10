@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tsm_employee,access_tsm_employee,model_tsm_employee,base.group_user,1,1,1,1
+access_tsm_position,access_tsm_position,model_tsm_position,base.group_user,1,1,1,1
+access_tsm_department,access_tsm_department,model_tsm_department,base.group_user,1,1,1,1 
+access_tsm_evaluate_template,access_tsm_evaluate_template,model_tsm_evaluate_template,base.group_user,1,1,1,1 
+access_tsm_evaluate_template_line,access_tsm_evaluate_template_line,model_tsm_evaluate_template_line,base.group_user,1,1,1,1 
+access_tsm_evaluation,access_tsm_evaluation,model_tsm_evaluation,base.group_user,1,1,1,1 
+access_tsm_evaluation_line,access_tsm_evaluation_line,model_tsm_evaluation_line,base.group_user,1,1,1,1
